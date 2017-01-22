@@ -26,14 +26,8 @@ function fizzbuzz() {
 function chessBoard(height, width) {
 	var board = "";
 	for (var i = 1; i <= height; i++) {
-		if (i % 2 == 0) {
-			for (var j = 1; j <= width; j++) {
-				board += (j % 2 == 0) ? "#" : " ";
-			}
-		} else {
-			for (var j = 1; j <= width; j++) {
-				board += (j % 2 == 0) ? " " : "#";
-			}
+		for (var j = 1; j <= width; j++) {
+			board += (i % 2 == 0) ? ((j % 2 == 0) ? "#" : " ") : ((j % 2 == 0) ? " " : "#")
 		}
 		board += "\n";
 	}
