@@ -23,28 +23,20 @@ function fizzbuzz() {
 }
 
 //Chess Board
-function chessBoard(width, height) {
+function chessBoard(height, width) {
 	var board = "";
 	for (var i = 1; i <= height; i++) {
 		if (i % 2 == 0) {
 			for (var j = 1; j <= width; j++) {
-				if (j % 2 == 0) {
-					board += "#";
-				} else {
-					board += " ";
-				}
+				board += (j % 2 == 0) ? "#" : " ";
 			}
 		} else {
 			for (var j = 1; j <= width; j++) {
-				if (j % 2 == 0) {
-					board += " ";
-				} else {
-					board += "#";
-				}
+				board += (j % 2 == 0) ? " " : "#";
 			}
 		}
 		board += "\n";
 	}
 	return board;
 }
-console.log(chessBoard(8, 8));
+console.log(chessBoard(8, 8))
