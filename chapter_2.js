@@ -27,10 +27,9 @@ function chessBoard(height, width) {
 	var board = "";
 	for (var i = 1; i <= height; i++) {
 		for (var j = 1; j <= width; j++) {
-			board += (i % 2 == 0) ? ((j % 2 == 0) ? "#" : " ") : ((j % 2 == 0) ? " " : "#")
+			board += (i % 2 == 0) ? ((j % 2 == 0) ? "#" : " ") : ((j % 2 == 0) ? " " : "#");
 		}
 		board += "\n";
 	}
 	return board;
 }
-console.log(chessBoard(8, 8))
