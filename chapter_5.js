@@ -88,4 +88,26 @@ function byCentury(file) {
 }
 // console.log(byCentury(JSON.parse(ANCESTRY_FILE)));
 
-//
+// Every and Then Some
+function otherEvery(arr, callback) {
+	var bool = arr.filter(callback);
+	return bool.length < arr.length ? false : true;
+}
+// console.log(otherEvery(['v','b','a'], function(a) {
+// 	if (a != 'a' && a != 'b')
+// 		return false;
+// 	else
+// 		return true;
+// }));
+
+function otherSome(arr, callback) {
+	var bool = arr.filter(callback);
+	return bool.length > 0 ? true : false;
+}
+
+// console.log(otherSome(['v','v','a'], function(a) {
+// 	if (a != 'a' && a != 'b')
+// 		return false;
+// 	else
+// 		return true;
+// }));
